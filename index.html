@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiempo Dojo</title>
+    <!--Aqui llamamos al css ubicando la ruta correspondiente-->
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+    <header class="flex-container">
+        <nav class="flex-container">
+            <h1>DojoWeather</h1>
+        </nav>
+        <nav class="flex-container">
+            <a href="#" onclick="alerta()">Burbank</a>
+            <a href="#" onclick="alerta()">Chicago</a>
+            <a href="#" onclick="alerta()">Dallas</a>
+        </nav>
+    </header>
+    <!--Contenedor Principal-->
+    <main>
+        <div class="contenedor-principal">
+            <div class="titulo-principal">
+                <div class="titulo-principal-izquierda">
+                    <h2>San Jose</h2>
+                </div>
+                <div class="titulo-principal-derecha">
+                    <form>
+                        <label>Show temperature in </label>
+                        <select name="temperature-scale" onchange="convert(this)">
+                            <option>°C</option>
+                            <option>°F</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div class="divisoria">
+                <hr>
+            </div>
+            <div class="bloque-medio">
+                <div class="primer-cuadro">
+                    <p>Today</p>
+                    <br>
+                    <img src="./image/some_rain.png" alt="lluvia" id = "primeraimg">
+                    <br>
+                    <br>
+                    <p>some rain</p>
+                    <br>
+                    <p>
+                        <span class = "high" style="color: red;" id= "temp1">24</span> 
+                        <span class="low" style="color: blue;" id= "temp2">18</span>
+                    </p>
+                </div>
+                <div class="segundo-cuadro">
+                    <p>Tomorrow</p>
+                    <br>
+                    <img src="./image/some_sun.png" alt="lluvia" id = "segundaimg">
+                    <br>
+                    <br>
+                    <p>some sun</p>
+                    <br>
+                    <p>
+                        <span class = "high" style="color: red;" id= "temp3">27</span> 
+                        <span class = "low" style="color: blue;" id= "temp4">19</span>
+                    </p> 
+                    
+                </div>
+                <div class="tercer-cuadro">
+                    <p>Friday</p>
+                    <br>
+                    <img src="./image/some_clouds.png" alt="lluvia" id = "terceraimg">
+                    <br>
+                    <br>
+                    <p>some clouds</p>
+                    <br>
+                    <p>
+                        <span class="high" style="color: red;" id= "temp5">21</span> 
+                        <span class="low" style="color: blue;" id= "temp6">16</span>
+                    </p>
+                </div>
+                <div class="cuarto-cuadro">
+                    <p>Saturday</p>
+                    <br>
+                    <img src="./image/some_sun.png" alt="lluvia" id = "cuartaimg">
+                    <br>
+                    <br>
+                    <p>some sun</p>
+                    <br>
+                    <p>
+                        <span class="high" style="color: red;" id= "temp7">26</span> 
+                        <span class="low" style="color: blue;" id= "temp8">21</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bloque-cookie" id = "cookie">
+                <div class="bloque-izquierda-pie">
+                    <img src="./image/cookie.png" alt="cookie">
+                </div>
+                <div class="bloque-medio-pie">
+                    <h2>Sotp!  Cookie time</h2>
+                    <p>We use cookie (sadly not the edibie ones) to personalize <br>
+                    contend and ads, to provide social media fecature and to <br>
+                    analyse our trafic <a href="#">Read more...</a></p>
+                </div>
+                <div class="bloque-derecha-pie">
+                    <button onclick="eliminarCookie()">I Accept</button>
+                </div>
+            </div>
+        </div>
+        <div class="container-final">
+        </div>
+    </main>
+    <script src="./static/js/logic.js"></script>
+</body>
+</html>
